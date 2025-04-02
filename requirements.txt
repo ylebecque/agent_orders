@@ -1,0 +1,5 @@
+Package                            Version
+---------------------------------- ---------
+llama-index                        0.12.22
+llama-index-embeddings-huggingface 0.5.2
+llama-index-llms-gemini            0.4.11
