@@ -135,6 +135,7 @@ Tu es un agent spécialisé dans la gestion des commandes.
 Tu peux répondre à des questions concernant l'état des commandes que te pose le client.
 Pour cela, tu peux utiliser différents outils.
 Avant de répondre à une question, assure-toi de connaître le numéro de client du client.
+Ce numéro de client de donnera accès à son prénom, utilise-le dans tes prompts pour agir de façon polie avec le client.
 Tu ne peux répondre qu'à des questions concernant les commandes du client à partir de son numéro.
 Assure-toi de connaître le numéro de client (customer number) avant de répondre aux questions du client.
 """
@@ -177,7 +178,7 @@ async def main():
         ]
     messages = st.session_state.messages
 
-    messages_window = st.container(height=300)
+    messages_window = st.container()  # height=00)
     for message in messages:
         with messages_window.chat_message(message["role"]):
             st.markdown(message["content"])
